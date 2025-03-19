@@ -25,45 +25,19 @@ class _TextFieldWidgetState extends State<TextFieldWidget> {
       children: [
         Text(widget.titleTextField, style: TextStyle(fontSize: 15)),
         SizedBox(height: 3),
-        Container(
-          decoration: BoxDecoration(
-            color: Colors.white, 
-            borderRadius: BorderRadius.circular(
-              10,
-            ), 
-            boxShadow: [
-              BoxShadow(
-                color: Colors.grey.withValues(alpha: 0.3),
-                spreadRadius: 3,
-                blurRadius: 5,
-                offset: Offset(0, 3), 
-              ),
-            ],
-          ),
-          child: TextField(
-            maxLines: widget.maxLines,
-            controller: widget.controller,
-            decoration: InputDecoration(
-              contentPadding: EdgeInsets.all(
-                10,
-              ), 
-              border: InputBorder.none, 
-              enabledBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.white,
-                  width: 1,
-                ), 
-                borderRadius: BorderRadius.circular(
-                  10,
-                ), 
-              ),
-              focusedBorder: OutlineInputBorder(
-                borderSide: BorderSide(
-                  color: Colors.blue,
-                  width: 2,
-                ), 
-                borderRadius: BorderRadius.circular(10),
-              ),
+        TextField(
+          maxLines: widget.maxLines,
+          controller: widget.controller,
+          decoration: InputDecoration(
+            contentPadding: EdgeInsets.all(10),
+            border: InputBorder.none,
+            enabledBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.grey.shade500, width: 1),
+              borderRadius: BorderRadius.circular(5),
+            ),
+            focusedBorder: OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.deepPurple, width: 2),
+              borderRadius: BorderRadius.circular(5),
             ),
           ),
         ),
